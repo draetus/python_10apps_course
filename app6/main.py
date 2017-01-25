@@ -32,13 +32,15 @@ def download_cats(folder):
 
 
 def display_cats(folder):
-    print('Displaying cats in Xviewer')
     if platform.system() == 'Dwarwin':
         subprocess.call(['open', folder])
+        print('Displaying cats in ' + platform.system())
     elif platform.system() == 'Windows':
         subprocess.call(['explorer', folder])
+        print('Displaying cats in ' + platform.system())
     elif platform.system() == 'Linux':
         subprocess.call(['xdg-open', folder])
+        print('Displaying cats in ' + platform.system())
     else:
         print("We don't support your OS: " + platform.system())
 
